@@ -10,20 +10,20 @@
                  <span class="icon-bar"></span>
                  <span class="icon-bar"></span>
              </button>
-             <a class="navbar-brand" href="#" style="color:white">Infusion Pump Web App</a>
+             <a class="navbar-brand" href="#" style="color:white">Company Employees</a>
             <!-- <span style="color:white"></span><p1> Infusion Pump Web App </p1><soan style="color:blue"></soan></a> -->
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 {% if user_type == 'Manager' %}
-                <li {% if prescription_page %} class="active"{% endif %} ><a href="/user_profile/prescription/">Prescription</a></li>
+                <li {% if prescription_page %} class="active"{% endif %} ><a href="/user_profile/stores/">Stores List</a></li>
                 <li {% if list_page %} class="active"{% endif %} ><a href="/user_profile/regular_list/">View All Employees</a></li>
                 {% elif user_type == 'Admin' %}<!-- 
                 <li {% if list_page %} class="active"{% endif %} ><a href="/user_profile/list/">Admin Console</a></li> -->
                  <li {% if list_page %} class="active"{% endif %} ><a href="/user_profile/manager_list/">Managers List</a></li>
                  <li {% if list_page %} class="active"{% endif %} ><a href="/user_profile/regular_list/">Regular Employees</a></li>
                 {% elif user_type == 'Regular' %}
-                <li {% if list_page %} class="active"{% endif %} ><a href="/user_profile/doctor_list/">View All Managers</a></li>
+                <li {% if list_page %} class="active"{% endif %} ><a href="/user_profile/manager_list/">View All Managers</a></li>
                 {% endif %}
 
             </ul>

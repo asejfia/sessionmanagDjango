@@ -1,7 +1,7 @@
 {% extends "master_page.html" %}
 
 {% block title %}
-Papers List
+Employees List
 {{ block.super }}
 {% endblock %}
 
@@ -27,7 +27,7 @@ Papers List
       </tr>
     </thead>
     <tbody>
-    	{% for p in patient_list %}
+    	{% for p in regular_list %}
       <tr>
         <td>{{p.user}}</td>
         <td>{{p.user.first_name}}</td>
@@ -38,7 +38,7 @@ Papers List
     </tbody>
   </table>
 </div>
-           {% elif user_type == 'Patient' or user_type == 'Admin'%}
+           {% elif user_type == 'Regular' or user_type == 'Admin'%}
 		   <h4>Doctors List</h4>
 		 	<div class="container">
   <table class="table">
